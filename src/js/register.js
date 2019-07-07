@@ -44,8 +44,10 @@ require(['require.config'],()=>{
                 //生成随机的验证码（4位）
                 let num = parseInt(Math.ceil(Math.random()*(10000-1000+1)+1000));
                 $('#code').on('click',()=>{
+                    
                     //获取用户输入的手机号
                     let mobile = this.username.val();
+                   
                     $.post('https://voice.yunpian.com/v2/voice/send.json',{
                         'apikey' :'553fc430fc15b5c67412e269ef26ec86',
                         'mobile' :mobile,
